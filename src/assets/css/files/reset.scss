@@ -1,6 +1,6 @@
-body,html {
-  background-color: #d8c9c9;
-  color: #333;
-  padding: 0;
-  margin: 0;
-}
+ 
+$mycolor: rgb(210, 233, 2); 
+
+body {
+    background: $mycolor;  
+} 

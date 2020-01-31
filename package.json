@@ -10,18 +10,19 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-purgecss": "^2.0.5",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2"
+    "live-server": "^1.2.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-count": "^1.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
+    "gulp-purgecss": "^2.0.5",
+    "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.1"
