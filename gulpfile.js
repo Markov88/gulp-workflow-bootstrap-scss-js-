@@ -3,10 +3,12 @@ const gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   cleanCSS = require('gulp-clean-css'),
   rename = require('gulp-rename'),
-  newer = require('gulp-newer')
+  newer = require('gulp-newer'),
 purgecss = require('gulp-purgecss'),
+concat = require('gulp-concat'),
+uglify = require('gulp-uglify'),
   size = require('gulp-size'),
-  imagemin = require('gulp-imagemin')
+  imagemin = require('gulp-imagemin'),
 browserSync = require('browser-sync').create();
 
 function css() {
@@ -29,7 +31,7 @@ function css() {
 function html() {
   return gulp.src('./src/**/*.html')
     .pipe(gulp.dest('./public/'));
-}
+};
 
 function serve() {
   browserSync.init({
@@ -37,12 +39,12 @@ function serve() {
       baseDir: './public'
     }
   })
-}
+};
 
 const dir = {
   src: 'src/',
-  build: 'build/'
-}
+  build: 'public/'
+};
 
 const imgConfig = {
   src: dir.src + 'images/**/*',
@@ -59,11 +61,23 @@ function images() {
     .pipe(imagemin(imgConfig.minOpts))
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(imgConfig.build));
-
-}
-exports.images = images;
-
+};
+ 
+function js(){
+  return gulp.src([
+              'node_modules/jquery/dist/jquery.js',
+              'node_modules/bootstrap/dist/js/bootstrap.js',
+              'src/assets/js/**/*.js'
+          ])
+          // .pipe(count('## js-files selected'))
+           .pipe(concat({ path: 'app.js', stat: { mode: 0666 }}))
+          .pipe(uglify())
+      .pipe(gulp.dest('./public/assets/js'));
+};
+ 
+gulp.watch('./src/assets/js/**/*.js',js);
+gulp.watch('./src/images/**/*',images);
 gulp.watch('./src/assets/css/**/*.scss', css);
 gulp.watch('./src/*.html', html).on('change', browserSync.reload);
 
-exports.default = gulp.parallel(html, css, serve);
+exports.default = gulp.parallel(html, css, js, images, serve);
