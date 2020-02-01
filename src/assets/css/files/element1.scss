@@ -1,11 +1,13 @@
 .element1 {
-  background-color:rgb(29, 165, 90);
+  background-color:rgb(78, 64, 156);
   color: #fff;
+  transition:.3s;
+  &:hover{
+    color: rgb(48, 46, 46);
+    background-color:rgb(212, 210, 221);
+  }
 }
-.element2 {
-  background-color:rgb(255, 7, 234);
-  color: #fff;
-} 
+
       
 
 .btn-text-3 {

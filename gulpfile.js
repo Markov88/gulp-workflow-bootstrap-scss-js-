@@ -16,8 +16,11 @@ function imports() {
   return gulp
     .src("./src/index.html")
     .pipe(htmlImport("./src/inc/"))
-    .pipe(gulp.dest("public"))
-    
+    .pipe(gulp.dest("public"));
+}
+
+function html() {
+  return gulp.src("./src/index.html").pipe(gulp.dest("./public"));
 }
 
 function css() {
@@ -53,18 +56,6 @@ function js() {
     .pipe(browserSync.stream());
 }
 
-function html() {
-  return gulp.src("./src/index.html").pipe(gulp.dest("./public"));
-}
-
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: "./public"
-    }
-  });
-}
-
 const dir = {
   src: "src/",
   build: "public/"
@@ -88,12 +79,20 @@ function images() {
 }
 
 function customSync() {
-   imports()
+  imports();
   css();
   browserSync.reload();
 }
 
-gulp.watch("./src/inc/*.html", imports).on("change", customSync)  ;
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: "./public"
+    }
+  });
+}
+
+gulp.watch("./src/inc/*.html", imports).on("change", customSync);
 gulp.watch("./src/*.html", html).on("change", customSync);
 gulp.watch("./src/assets/css/**/*.scss", css);
 gulp.watch("./src/assets/js/**/*.js", js);
