@@ -53,7 +53,7 @@ function js() {
 }
 
 function html() {
-  return gulp.src("./src/**/*.html").pipe(gulp.dest("./public"));
+  return gulp.src("./src/*.html").pipe(gulp.dest("./public"));
 }
 
 function serve() {
