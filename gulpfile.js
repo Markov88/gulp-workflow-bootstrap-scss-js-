@@ -78,7 +78,13 @@ function images() {
     .pipe(gulp.dest(imgConfig.build));
 }
 
-gulp.watch("./src/*.html", html).on("change", browserSync.reload);
+
+function customSync(){
+  css()
+  browserSync.reload();
+}
+
+gulp.watch("./src/*.html", html).on("change", customSync);
 
 gulp.watch("./src/assets/css/**/*.scss", css);
 gulp.watch("./src/assets/js/**/*.js", js);
