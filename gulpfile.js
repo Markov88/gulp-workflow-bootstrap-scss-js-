@@ -9,7 +9,15 @@ const gulp = require("gulp"),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify"),
   size = require("gulp-size"),
-  imagemin = require("gulp-imagemin");
+  imagemin = require("gulp-imagemin"),
+  htmlImport = require("gulp-html-import");
+
+function imports() {
+  return gulp
+    .src("./src/index.html")
+    .pipe(htmlImport("./src/inc/"))
+    .pipe(gulp.dest("public"));
+}
 
 function css() {
   return gulp
@@ -78,16 +86,15 @@ function images() {
     .pipe(gulp.dest(imgConfig.build));
 }
 
-
-function customSync(){
-  css()
+function customSync() {
+  imports();
+  css();
   browserSync.reload();
 }
-
+gulp.watch("./src/inc/*.html", imports).on("change", customSync);
 gulp.watch("./src/*.html", html).on("change", customSync);
-
 gulp.watch("./src/assets/css/**/*.scss", css);
 gulp.watch("./src/assets/js/**/*.js", js);
 gulp.watch("./src/images/**/*", images);
 
-exports.default = gulp.parallel(html, css, js, images, serve);
+exports.default = gulp.parallel(html, css, js, images, imports, serve);
