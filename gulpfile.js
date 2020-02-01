@@ -16,7 +16,8 @@ function imports() {
   return gulp
     .src("./src/index.html")
     .pipe(htmlImport("./src/inc/"))
-    .pipe(gulp.dest("public"));
+    .pipe(gulp.dest("public"))
+    
 }
 
 function css() {
@@ -53,7 +54,7 @@ function js() {
 }
 
 function html() {
-  return gulp.src("./src/*.html").pipe(gulp.dest("./public"));
+  return gulp.src("./src/**/*.html").pipe(gulp.dest("./public"));
 }
 
 function serve() {
@@ -87,11 +88,12 @@ function images() {
 }
 
 function customSync() {
-  imports();
+   imports()
   css();
   browserSync.reload();
 }
-gulp.watch("./src/inc/*.html", imports).on("change", customSync);
+
+gulp.watch("./src/inc/*.html", imports).on("change", customSync)  ;
 gulp.watch("./src/*.html", html).on("change", customSync);
 gulp.watch("./src/assets/css/**/*.scss", css);
 gulp.watch("./src/assets/js/**/*.js", js);
