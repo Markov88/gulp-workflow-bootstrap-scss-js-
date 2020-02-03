@@ -1,179 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test</title>
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Test</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-   
-</head>
-
-<body>
-   
-  
-<header >
+  <body>
+    <!-- <header >
     <button class='btn element1 btn-block text-center w-25 mx-auto mt-4 btn-text-3  shadow-none' id='btn'> JS test</button>
 
     <h2 class='d-block bg-dark p-3 text-center  my-3 mx-5 text-light'>hello from header</h1>
-</header> 
-  <main  >
-    <h1 class="display-5 text-center my-4">zz  zzzz&eeeerrr aeerreeeaaaAccordion</h1>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-                2: Utilities
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
-                <a class="dropdown-item" href="2_3_text_alignment_display.html">2.3 Text Alignment & Display</a>
-                <a class="dropdown-item" href="2_4_floats_position.html">2.4 Floats & Position</a>
-                <a class="dropdown-item" href="2_5_colors_background.html">2.5: Colors & Background</a>
-                <a class="dropdown-item" href="2_6_spacing.html">2.6 Spacing</a>
-                <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
-                <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-                3: CSS Components
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="3_2_buttons.html">3.2 Buttons</a>
-                <a class="dropdown-item" href="3_3_navbar.html">3.3 Navbar</a>
-                <a class="dropdown-item" href="3_4_list_groups_badges.html">3.4 List Groups & Badges</a>
-                <a class="dropdown-item" href="3_5_forms.html">3.5 Forms</a>
-                <a class="dropdown-item" href="3_6_input_groups.html">3.6 Input Groups</a>
-               
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-warning btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-                4: Grid & Flexbox
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="4_2_grid_system.html">4.2 Grid System</a>
-                <a class="dropdown-item" href="4_3_grid_alignment.html">4.3 Grid Alignment</a>
-                <a class="dropdown-item" href="4_4_flexbox.html">4.4 Flexbox</a>
-                <a class="dropdown-item" href="4_5_auto_margins_wrapping_order.html">4.5 Auto Margins & Wrap</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-danger btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-                5: JavaScript Widgets
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="5_2_carousel.html">5.2 Carousel</a>
-                <a class="dropdown-item" href="5_3_collapse.html">5.3 Collapse</a>
-                <a class="dropdown-item" href="5_4_tooltips.html">5.4 Tooltips</a>
-                <a class="dropdown-item" href="5_5_popovers.html">5.5 Popovers</a>
-                <a class="dropdown-item" href="5_6_modals.html">5.6 Modals</a>
-                <a class="dropdown-item" href="5_7_scrollspy.html">5.7 ScrollSpy</a>
-              </div>
-            </div>
+      
+</header> -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Glozzom</a>
+    <button
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- SHOWCASE SLIDER -->
+<section id="showcase">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-image-1 active">
+        <div class="container">
+          <div class="carousel-caption d-none d-sm-block text-right mb-5">
+            <h1 class="display-3">Heading One</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              aperiam vel ullam deleniti reiciendis ratione quod aliquid
+              inventore vero perspiciatis.
+            </p>
+            <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
           </div>
         </div>
       </div>
-      <hr>
-    </header>
-  
-     
-   
-      <br>
-     
-    <hr>
-   <div class="container mb-3">
-    <div class='d-flex row-hl justify-content-between'> 
-        <div class="item-hl">
-    <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip On Top</button>
-</div>
-<div class="item-hl"><button id="hello" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip On Right</button></div>
-<div class="item-hl">  <button class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip On Bottom</button></div>
-<div class="item-hl">  <button class="btn btn-dark" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip On Left</button></div>
-<div class="item-hl">  <button class="btn btn-dark" data-toggle="modal" data-target="#loginModal">Login</button></div>
-</div>
-</div>
-    <!-- LOGIN MODAL -->
-    <div class="modal" id="loginModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Login</h5>
-            <button class="close" data-dismiss="modal">&times;</button>
+
+      <div class="carousel-item carousel-image-2">
+        <div class="container">
+          <div class="carousel-caption d-none d-sm-block mb-5">
+            <h1 class="display-3">Heading Two</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              aperiam vel ullam deleniti reiciendis ratione quod aliquid
+              inventore vero perspiciatis.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" placeholder="Username" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Password" class="form-control">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal">Login</button>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel-image-3">
+        <div class="container">
+          <div class="carousel-caption d-none d-sm-block text-right mb-5">
+            <h1 class="display-3">Heading Three</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              aperiam vel ullam deleniti reiciendis ratione quod aliquid
+              inventore vero perspiciatis.
+            </p>
+            <a href="#" class="btn btn-success btn-lg">Learn More</a>
           </div>
         </div>
       </div>
     </div>
-    <button class="btn btn-secondary" onclick="showTooltip()">
-      Show Tooltip
-    </button>
 
-    <button class="btn btn-secondary" onclick="hideTooltip()">
-      Hide Tooltip
-    </button>
+    <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
 
-    <button class="btn btn-secondary" onclick="toggleTooltip()">
-      Toggle Tooltip
-    </button>
-    <button id="hello" class="btn btn-primary" data-toggle="popover" data-placement="left" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore.
-    Toggle popover" data-trigger="focus">
-      Toggle popover
-    </button>
+    <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>
 
-    <button class="btn btn-secondary" onclick="showPopover()">Show Popover</button>
-    <button class="btn btn-secondary" onclick="hidePopover()">Hide Popover</button>
-    <button class="btn btn-secondary" onclick="togglePopover()">Toggle Popover</button>
-    <button class="btn btn-danger" data-toggle="popover" data-placement="top" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore.
-    Toggle popover">
-      Toggle Popover
-    </button>
+<!--HOME ICON SECTION  -->
+<section id="home-icons" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 text-center">
+        <i class="fas fa-cog fa-3x mb-2"></i>
+        <h3>Turning Gears</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero,
+          veniam.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <i class="fas fa-cloud fa-3x mb-2"></i>
+        <h3>Sending Data</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero,
+          veniam.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <i class="fas fa-cart-plus fa-3x mb-2"></i>
+        <h3>Making Money</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero,
+          veniam.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <button class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore.
-    Toggle popover">
-      Toggle popover
-    </button>
+<!-- HOME HEADING SECTION -->
+<section id="home-heading" class="p-5">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col">
+        <div class="container pt-5">
+          <h1>Are You Ready To Get Started?</h1>
+          <p class="d-none d-md-block">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eaque
+            magni sit dolores. Nisi, dolor nam modi perspiciatis consequatur
+            soluta.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <button class="btn btn-warning" data-toggle="popover" data-placement="bottom" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore.
-    Toggle popover">
-      Toggle popover
-    </button>
+<!-- INFO SECTION -->
+<section id="info" class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <h3>Lorem Ipsum</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          eveniet blanditiis incidunt iusto corrupti illum cum laudantium ex
+          sequi amet.
+        </p>
+        <a href="about.html" class="btn btn-outline-danger btn-lg"
+          >Learn More</a
+        >
+      </div>
+      <div class="col-md-6">
+        <img src="images/laptop.png" alt="" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
 
-    <button class="btn btn-info" data-toggle="popover" data-placement="left" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, inventore.
-    Toggle popover">
-      Toggle popover
-    </button>
+<!-- VIDEO PLAY -->
+<section id="video-play">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col">
+        <div class="container p-5">
+          <a
+            href="#"
+            class="video"
+            data-video="https://www.youtube.com/embed/HnwsG9a5riA"
+            data-toggle="modal"
+            data-target="#videoModal"
+          >
+            <i class="fas fa-play fa-3x"></i>
+          </a>
+          <h1>See What We Do</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </main>
+<!-- PHOTO GALLERY -->
+<section id="gallery" class="py-5">
+  <div class="container">
+    <h1 class="text-center">Photo Gallery</h1>
+    <p class="text-center">Check out our photos</p>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/560x560"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="560"
+          data-width="560"
+        >
+          <img
+            src="https://source.unsplash.com/random/560x560"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
 
-  <footer class='bg-danger p-2 text-center my-2 mx-5 text-light'>
-<h2 >hello from footer</h2>
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/561x561"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="561"
+          data-width="561"
+        >
+          <img
+            src="https://source.unsplash.com/random/561x561"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/562x562"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="562"
+          data-width="562"
+        >
+          <img
+            src="https://source.unsplash.com/random/562x562"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/563x563"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="563"
+          data-width="563"
+        >
+          <img
+            src="https://source.unsplash.com/random/563x563"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/564x564"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="564"
+          data-width="564"
+        >
+          <img
+            src="https://source.unsplash.com/random/564x564"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a
+          href="https://source.unsplash.com/random/565x565"
+          data-toggle="lightbox"
+          data-gallery="img-gallery"
+          data-height="565"
+          data-width="565"
+        >
+          <img
+            src="https://source.unsplash.com/random/565x565"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="text-center p-5 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Sign Up For Our Newsletter</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          asperiores consectetur, quae ducimus voluptates vero repellendus
+          architecto maiores recusandae mollitia?
+        </p>
+        <form class="form-inline justify-content-center">
+          <input
+            type="text"
+            class="form-control mb-2 mr-2"
+            placeholder="Enter Name"
+          />
+          <input
+            type="text"
+            class="form-control mb-2 mr-2"
+            placeholder="Enter Email"
+          />
+          <button class="btn btn-primary mb-2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="main-footer" class="text-center p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>Copyright &copy; <span id="year"></span> Glozzom</p>
+      </div>
+    </div>
+  </div>
 </footer>
-</body>
-<script src="assets/js/app.js"></script>
 
- 
+<!-- VIDEO MODAL -->
+<div class="modal fade" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <iframe
+          src=""
+          frameborder="0"
+          height="350"
+          width="100%"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+  <script src="assets/js/app.js"></script>
 </html>

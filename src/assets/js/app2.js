@@ -1,67 +1,85 @@
-$('#btn').click(function () {
-       alert('Hello from app2')
-      });
+$("#btn").click(function() {
+  alert("Hello from app2");
+});
 
+// Init tooltips
+$('[data-toggle="tooltip"]').tooltip();
 
-       // Init tooltips
-    $('[data-toggle="tooltip"]').tooltip();
+function showTooltip() {
+  $("#hello").tooltip("show");
+}
 
-    function showTooltip() {
-      $('#hello').tooltip('show');
-    }
+function hideTooltip() {
+  $("#hello").tooltip("hide");
+}
 
-    function hideTooltip() {
-      $('#hello').tooltip('hide');
-    }
+function toggleTooltip() {
+  $("#hello").tooltip("toggle");
+}
 
-    function toggleTooltip() {
-      $('#hello').tooltip('toggle');
-    }
+// Tooltip Events
+$("#hello").on("show.bs.tooltip", function() {
+  console.log("Tooltip Show");
+});
 
-    // Tooltip Events
-    $('#hello').on('show.bs.tooltip', function () {
-      console.log('Tooltip Show');
-    });
+$("#hello").on("shown.bs.tooltip", function() {
+  console.log("Tooltip Shown");
+});
 
-    $('#hello').on('shown.bs.tooltip', function () {
-      console.log('Tooltip Shown');
-    });
+$("#hello").on("hide.bs.tooltip", function() {
+  console.log("Tooltip Hide");
+});
 
-    $('#hello').on('hide.bs.tooltip', function () {
-      console.log('Tooltip Hide');
-    });
+$("#hello").on("hidden.bs.tooltip", function() {
+  console.log("Tooltip Hidden");
+});
+$('[data-toggle="popover"]').popover();
 
-    $('#hello').on('hidden.bs.tooltip', function () {
-      console.log('Tooltip Hidden');
-    });
-    $('[data-toggle="popover"]').popover();
+function showPopover() {
+  $("#hello").popover("show");
+}
 
-    function showPopover() {
-      $('#hello').popover('show');
-    }
+function hidePopover() {
+  $("#hello").popover("hide");
+}
 
-    function hidePopover() {
-      $('#hello').popover('hide');
-    }
+function togglePopover() {
+  $("#hello").popover("toggle");
+}
 
-    function togglePopover() {
-      $('#hello').popover('toggle');
-    }
+// Popover events
+$("#hello").on("show.bs.popover", function() {
+  console.log("Popover show");
+});
 
-    // Popover events
-    $('#hello').on('show.bs.popover', function () {
-      console.log('Popover show');
-    });
+$("#hello").on("shown.bs.popover", function() {
+  console.log("Popover shown");
+});
 
-    $('#hello').on('shown.bs.popover', function () {
-      console.log('Popover shown');
-    });
+$("#hello").on("hide.bs.popover", function() {
+  console.log("Popover hide");
+});
 
-    $('#hello').on('hide.bs.popover', function () {
-      console.log('Popover hide');
-    });
+$("#hello").on("hidden.bs.popover", function() {
+  console.log("Popover hidden");
+});
 
-    $('#hello').on('hidden.bs.popover', function () {
-      console.log('Popover hidden');
-    });
-  
+$(document).ready(function() {
+  //for dropdown ul in nav-mobile
+  var fixHeight = function() {
+    $(".navbar-nav").css(
+      "max-height",
+      document.documentElement.clientHeight - 150
+    );
+  };
+  fixHeight();
+  $(window).resize(function() {
+    fixHeight();
+  });
+  $(".navbar .navbar-toggler").on("click", function() {
+    fixHeight();
+  });
+  $(".navbar-toggler, .overlay").on("click", function() {
+    $(".mobileMenu, .overlay").toggleClass("open");
+  });
+});
